@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fabri404 - HTML 404 Page Template</title>
+  </head>
+  <body>
+    <div class="error">
+      <div class="cosmonot">
+        <img src="./assets/astronout.png" alt="" />
+      </div>
+      <div class="error-box">
+        <nuxt-link to="/">
+          <img src="./assets/fabrikod-error-logo.svg" alt="" />
+        </nuxt-link>
+        <div class="error-box-title ex-bold">{{ $t('ERROR_PAGE.PAGE') }}</div>
+        <p class="error-box-desc" v-html="$t('ERROR_PAGE.COSMIC')" />
+        <div class="error-box-footer">
+          <nuxt-link to="/" class="error-box-link">
+            {{ $t('ERROR_PAGE.BACK') }}
+          </nuxt-link>
+          <div class="world-border">
+            <img class="world" src="./assets/earth.png" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div id="stars" />
+      <div id="star2" />
+      <div id="star3" />
+    </div>
+  </body>
+</html>

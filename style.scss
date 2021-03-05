@@ -1,0 +1,177 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.error {
+  background-color: #000000;
+  height: 100vh;
+  overflow: hidden;
+
+  .world-border {
+    width: 157px;
+    height: 157px;
+    border: 1px solid transparent;
+    border-radius: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 96px;
+
+    &:hover {
+      border-color: $primary-color;
+    }
+  }
+
+  .cosmonot {
+    position: absolute;
+    right: 30%;
+    top: 30%;
+    height: 122px;
+    animation: cosmonot 60s forwards;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .world {
+    animation: world 30s linear infinite;
+  }
+
+  &-box {
+    position: absolute;
+    bottom: 40px;
+    left: 25%;
+    color: #e5e5e5;
+    z-index: 9;
+
+    &-title {
+      font-size: 12px;
+      letter-spacing: 4px;
+      margin-top: 56px;
+      margin-bottom: 18px;
+    }
+    &-desc {
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 54px;
+    }
+    &-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      img {
+        height: 77px;
+      }
+    }
+    &-link {
+      color: currentColor;
+      font-size: 18px;
+      font-weight: 600;
+      border-bottom: 2px solid $primary-color;
+      padding-bottom: 14px;
+    }
+  }
+
+  @keyframes cosmonot {
+    from {
+      transform: rotate(0) translate(0, 0) scale(1);
+    }
+    to {
+      transform: rotate(360deg) translate(200px, -200px) scale(0.05);
+    }
+  }
+
+  @keyframes world {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @function multiple-box-shadow($n) {
+    $value: "#{random(2000)}px #{random(2000)}px #4f4f4f";
+    @for $i from 2 through($n) {
+      $value: "#{$value} , #{random(2000)}px #{random(2000)}px #4f4f4f";
+    }
+
+    @return unquote($value);
+  }
+
+  $shadows-small: multiple-box-shadow(700);
+  $shadows-medium: multiple-box-shadow(200);
+  $shadows-big: multiple-box-shadow(100);
+
+  #stars {
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: $shadows-small;
+    animation: animStar 50s linear infinite;
+
+    &:after {
+      content: " ";
+      position: absolute;
+      top: 2000px;
+      width: 1px;
+      height: 1px;
+      background: transparent;
+      box-shadow: $shadows-small;
+    }
+  }
+
+  #stars2 {
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow: $shadows-medium;
+    animation: animStar 100s linear infinite;
+
+    &:after {
+      content: " ";
+      position: absolute;
+      top: 2000px;
+      // color: #4f4f4f;
+      width: 2px;
+      height: 2px;
+      background: transparent;
+      box-shadow: $shadows-medium;
+    }
+  }
+
+  #stars3 {
+    width: 4px;
+    height: 4px;
+    background: transparent;
+    box-shadow: $shadows-big;
+    animation: animStar 150s linear infinite;
+
+    &:after {
+      content: " ";
+      position: absolute;
+      top: 2000px;
+      width: 3px;
+      height: 3px;
+      background: transparent;
+      box-shadow: $shadows-big;
+    }
+  }
+
+  @keyframes animStar {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-2000px);
+    }
+  }
+}
