@@ -13,15 +13,16 @@
         <img src="./assets/astronout.png" alt="" />
       </div>
       <div class="error-box">
-        <nuxt-link to="/">
+        <a href="/">
           <img src="./assets/fabrikod-error-logo.svg" alt="" />
-        </nuxt-link>
-        <div class="error-box-title ex-bold">{{ $t('ERROR_PAGE.PAGE') }}</div>
-        <p class="error-box-desc" v-html="$t('ERROR_PAGE.COSMIC')" />
+        </a>
+        <div class="error-box-title ex-bold">PAGE NOT FOUND</div>
+        <p class="error-box-desc">
+          The cosmic object you are looking for <br />
+          has disappeared beyond the event horizon.
+        </p>
         <div class="error-box-footer">
-          <nuxt-link to="/" class="error-box-link">
-            {{ $t('ERROR_PAGE.BACK') }}
-          </nuxt-link>
+          <a href="/" class="error-box-link"> Back to Fabrikod </a>
           <div class="world-border">
             <img class="world" src="./assets/earth.png" alt="" />
           </div>
