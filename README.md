@@ -5,6 +5,6 @@ Fabrikod.com's inspiring 404 not found page code is now open source.
 ![image](https://user-images.githubusercontent.com/3144843/109776746-f9acb400-7c13-11eb-94c7-81cb51f55f4a.png)
 
 [Demo](https://www.fabrikod.com/404)\
-[Codepen](https://codepen.io/fabrikod/pen/abBRvRj)
+[Codepen](https://codepen.io/fabrikod/full/abBRvRj)
 
 ![image](https://user-images.githubusercontent.com/3144843/109776360-8b67f180-7c13-11eb-93ba-df44e34d67a6.png)
